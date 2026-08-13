@@ -1,0 +1,149 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: white;
+    color: black;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    
+}
+ul li{
+    padding: 21px;
+    font-family: playfair display;
+    font-weight: bold;
+}
+.left{
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: playfair display;
+
+}
+.separation{
+    height: 2px;
+    background-color: black;
+}
+.separation1{
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+}
+
+.HOME{
+    display: flex;
+    justify-content: space-around;
+    padding: 100px;
+    padding-top: 4px;
+}
+.leftsec{
+    padding-top: 145px;
+    padding-right: 48px;
+}
+.Name{
+    font-size: 72px;
+    font-weight: bolder;
+}
+.sentence{
+    padding-top: 10px;
+    color: #4C4546;
+    font-family: poppins;
+}
+.rightsec{
+    padding-top: 131px;
+    padding-right: 160px;
+    height: 332px;
+    width: 263px;
+}
+.myphoto{
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 56px;
+}
+.buttom1{
+    margin-top: 15px;
+    width: 199px;
+    height:59px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    font-family: poppins;
+    
+    
+}
+.buttom2{
+    margin-left: 15px;
+    width: 199px;
+    height:59px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-family: poppins;
+}
+.buttom1:hover {
+  background-color: #242323e9;
+  transition: all 0.3s ease;
+}
+.buttom2:hover {
+  background-color: #000000e9;
+  color: white;
+  transition: all 0.3s ease;
+  
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-family: playfair display;
+    font-size: 39px;
+}
+.aboutmecontant{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 250px ;
+    font-family: poppins;
+    color: #4C4546;
+    font-size: 20px;
+}
+.getconnected{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    font-family: playfair display;
+    font-size: 22px;
+    font-weight: bold;
+}
+.profiles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.linkedin{
+    height: 58px;
+    width: 58px;
+}
+.github{
+    height: 58px;
+    width: 108px;
+}
+.email{
+    height: 58px;
+    width: 58px;
+}
+
