@@ -33,7 +33,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Scroll Animation with Intersection Observer
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
@@ -49,14 +48,12 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all sections and elements for animation
 const sectionsToObserve = document.querySelectorAll('.aboutme, .skills, .project, .contactpage, .project-card');
 sectionsToObserve.forEach((section) => {
     section.classList.add('fade-in-section');
     observer.observe(section);
 });
 
-// Also observe title elements
 const titles = document.querySelectorAll('.title');
 titles.forEach((title) => {
     title.classList.add('fade-in-section');
