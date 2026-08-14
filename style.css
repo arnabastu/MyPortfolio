@@ -96,6 +96,99 @@ ul li a:hover {
     background-color: black;
     color: white;
 }
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Home Section Animations */
+.HOME .leftsec {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.HOME .rightsec {
+    animation: slideInRight 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* Scroll Animation Classes */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger animations for project cards */
+.project-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card:nth-child(1).visible {
+    animation-delay: 0s;
+}
+
+.project-card:nth-child(2).visible {
+    animation-delay: 0.1s;
+}
+
+.project-card:nth-child(3).visible {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(4).visible {
+    animation-delay: 0.3s;
+}
 .separation{
     height: 2px;
     background-color: black;
