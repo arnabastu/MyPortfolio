@@ -255,7 +255,7 @@ ul li a:hover {
  
 .github{
     height: clamp(40px, 8vw, 58px);
-    width: clamp(70px, 12vw, 108px);
+    width: clamp(55px, 12vw, 58px);
 }
  
 .email{
@@ -714,7 +714,7 @@ footer{
     }
     
     .github {
-        width: clamp(60px, 10vw, 80px);
+        width: clamp(40px, 8vw, 80px);
     }
     
     .projects-grid {
