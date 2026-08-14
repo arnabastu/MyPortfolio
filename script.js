@@ -32,4 +32,38 @@ window.addEventListener('scroll', () => {
         navMenu.classList.remove('active');
     }
 });
- 
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const payload = {
+            name: contactForm.name.value,
+            email: contactForm.email.value,
+            message: contactForm.message.value
+        };
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            });
+
+            if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error(errorText || 'Form submission failed');
+            }
+
+            contactForm.reset();
+            alert('Your message has been sent successfully!');
+        } catch (error) {
+            console.error('Form submission error:', error);
+            alert('Something went wrong. Please try again.');
+        }
+    });
+} 

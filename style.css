@@ -69,7 +69,7 @@ ul{
     gap: 0;
 }
 ul li{
-    padding: 21px 12px;
+    padding: 21px 22px;
     font-family: playfair display;
     font-weight: bold;
     font-size: clamp(12px, 2vw, 16px);
@@ -234,7 +234,7 @@ ul li a:hover {
     font-family: playfair display;
     font-size: clamp(16px, 4vw, 22px);
     font-weight: bold;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
  
 .profiles{
@@ -432,7 +432,7 @@ label{
 }
 .contact{
     display: block;
-    width: clamp(250px, 80vw, 478px);
+    width: clamp(250px, 80vw, 450px);
     height: clamp(35px, 6vw, 45px);
     padding: 12px 15px;
     margin: 0 auto 15px;
@@ -452,7 +452,7 @@ label{
     background-color: black;
     color: white;
     height: clamp(45px, 8vw, 53px);
-    width: clamp(250px, 80vw, 480px);
+    width: clamp(250px, 80vw, 60px);
     border: 1px solid black;
     border-radius: 7px;
     font-family: poppins;
@@ -514,7 +514,7 @@ footer{
     .right {
         display: none;
         position: absolute;
-        top: 70px;
+        top: 63.6px;
         left: 0;
         right: 0;
         background-color: rgba(255, 255, 255, 0.98);
@@ -523,6 +523,8 @@ footer{
         border-bottom: 2px solid black;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         z-index: 99;
+        max-height: calc(100vh - 65px);
+        overflow-y: auto;
     }
     
     .right.active {
@@ -588,7 +590,7 @@ footer{
     }
     
     nav {
-        padding: 12px 16px;
+        padding: 20px 16px;
         gap: 0;
         justify-content: space-between;
     }
@@ -600,7 +602,7 @@ footer{
     .right {
         display: none;
         position: absolute;
-        top: 65px;
+        top: 63.6px;
         left: 0;
         right: 0;
         background-color: rgba(255, 255, 255, 0.98);
@@ -752,7 +754,7 @@ footer{
     
     .separation {
         position: sticky;
-        top: 65px;
+        top: 63.6px;
     }
     
     label {
@@ -760,7 +762,7 @@ footer{
     }
     
     .contact {
-        width: 100%;
+        width: 80%;
         max-width: 100%;
         height: 40px;
         padding: 10px;
@@ -768,7 +770,7 @@ footer{
     }
     
     .lastbutton {
-        width: 100%;
+        width: 50%;
         height: 45px;
         font-size: 12px;
     }
@@ -830,4 +832,8 @@ footer{
         width: 22px;
         height: 2px;
     }
+}
+.logo{
+    height: 36px;
+    width:36px;
 }
