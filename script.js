@@ -5,8 +5,14 @@ const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 const themeButton = document.getElementById('theme');
 
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+}
+
 themeButton.addEventListener('click', () => {
     const isDarkMode = document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
     themeButton.setAttribute('aria-pressed', String(isDarkMode));
     themeButton.setAttribute('aria-label', isDarkMode ? 'Switch to light mode' : 'Switch to dark mode');
     themeButton.setAttribute('title', isDarkMode ? 'Switch to light mode' : 'Switch to dark mode');
