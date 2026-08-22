@@ -9,21 +9,28 @@
   <body>
     <header>
       <nav>
-        <a href="https://arnabchanda-portfolio.vercel.app/"><img src="images/LOGO.png" alt="Logo" class="logo"></a>
-        <div class="left"><a href="https://arnabchanda-portfolio.vercel.app/" style="text-decoration: none; color: black;">Arnab Chanda</a></div>
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="brand-group">
+          <a href="https://arnabchanda-portfolio.vercel.app/"><img src="images/LOGO.png" alt="Logo" class="logo"></a>
+          <div class="left"><a href="https://arnabchanda-portfolio.vercel.app/" style="text-decoration: none; color: black;">Arnab Chanda</a></div>
         </div>
-        <div class="right" id="navMenu">
-          <ul>
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#aboutme">ABOUT ME</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
+        <div class="nav-actions">
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="right" id="navMenu">
+            <ul>
+              <li><a href="#home">HOME</a></li>
+              <li><a href="#aboutme">ABOUT ME</a></li>
+              <li><a href="#skills">SKILLS</a></li>
+              <li><a href="#projects">PROJECTS</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+            </ul>
+          </div>
+          <div class="theme-control">
+            <a id="theme" aria-label="Toggle dark mode" title="Toggle dark mode"><img class="theme-icon" src="images/theme.png" alt=""></a>
+          </div>
         </div>
       </nav>
     </header>
@@ -48,6 +55,12 @@
         <img class="myphoto" src="images/my_photo.jpg" alt="My_Photo" />
       </div>
     </main>
+    <!-- <div class="floating-bar">
+        <a href="mailto:arnabchanda475@gmail.com" class="bar-item" target="_blank"><img src="images/email.png" alt="email" style="height:50px; width:50px; " ></a>
+        <a href="https://github.com/arnabastu" class="bar-item" target="_blank"><img src="images/github.png" alt="Github" style="height:50px; width:50px; "></a>
+        <a href="https://www.linkedin.com/in/arnab-chanda-70124235a/" class="bar-item" target="_blank"><img src="images/linkedin.png" alt="Linkedin" style="height:50px; width:50px;  "></a>
+        <a href="https://www.instagram.com/wtfarnab/" class="bar-item" target="_blank"><img src="images/instagram.png" alt="Instagram" style="height:50px; width:50px; "></a>
+      </div> -->
     <div class="separation1"></div>
     <main class="aboutme" id="aboutme">
       <div class="title"><h1>About Me</h1></div>
@@ -66,6 +79,7 @@
         Data Structures & Algorithms, Web development, AI/ML and Data Science while
         exploring new ideas and technologies.
       </div>
+
       <div class="getconnected">My Profiles</div>
       <ul>
         <li>
@@ -84,7 +98,7 @@
           /></a>
         </li>
         <li>
-          <a href="mailto:arnabchanda@gmail.com" target="_blank"
+          <a href="https://github.com/arnabastu" target="_blank"
             ><img class="profiles email" src="images/email.png" alt="Email"
           /></a>
         </li>
@@ -163,7 +177,7 @@
                 target="_blank"
               >
                 GITHUB
-                <span>↗</span>
+                <span style="color: white;">↗</span>
               </a>
             </div>
           </article>
@@ -196,7 +210,7 @@
                 target="_blank"
               >
                 GITHUB
-                <span>↗</span>
+                <span style="color: white;">↗</span>
               </a>
             </div>
           </article>
@@ -210,7 +224,7 @@
               <h3 style="font-weight: bolder">Ocean_OS</h3>
  
               <p>
-                An AI powered Marine Navigation System which collect information from
+                Marine Navigation System which collect information from
                 Social Media, Crowd reporting and verify it with the data from
                 INCOSI etc to give a confidence source and Also push alerts to
                 the citizens and Marines
@@ -228,7 +242,7 @@
                 target="_blank"
               >
                 GITHUB
-                <span>↗</span>
+                <span style="color: white;">↗</span>
               </a>
             </div>
           </article>
@@ -256,10 +270,10 @@
               <a
                 href="https://github.com/arnabastu/PaddyPulse"
                 class="project-button"
-                target="_blank"
+                target="_blank" style="margin-top: 25px;"
               >
                 GITHUB
-                <span>↗</span>
+                <span style="color: white;">↗</span>
               </a>
             </div>
           </article>
@@ -290,14 +304,13 @@
     <div class="separation1"></div>
     <main class="foot">
       <footer class="footer">
-        <div class="leftfooter">Arnab Chanda</div>
-        <div class="centerfooter"><a href="mailto:arnabchanda475@gmail.com" style="color: white; text-decoration: none;">Email</a></div>
-        <div class="centerfooter"><a href="https://www.leetcode.com/u/arnab_chanda" target="_blank" style="color: white; text-decoration: none; ">Leetcode</a></div>
-        <div class="centerfooter"><a href="#home" style="color: white; text-decoration: none;">Go to Top</a></div>
-        <div class="rightfooter">© 2026 Arnab Chanda. All rights reserved.</div>
+        <div class="leftfooter" >Arnab Chanda</div>
+        <div class="centerfooter"><a href="mailto:arnabchanda475@gmail.com" >Email</a></div>
+        <div class="centerfooter"><a href="https://leetcode.com/u/arnab_chanda/" target="_blank">Leetcode</a></div>
+        <div class="centerfooter"><a href="#home">Go to Home</a></div>
+        <div class="rightfooter" style="color: white;">© 2026 Arnab Chanda. All rights reserved.</div>
       </footer>
     </main>
- 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>

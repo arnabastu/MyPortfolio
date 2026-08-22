@@ -1,6 +1,16 @@
 
+import createGlobe from 'https://esm.sh/cobe';
+
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
+const themeButton = document.getElementById('theme');
+
+themeButton.addEventListener('click', () => {
+    const isDarkMode = document.body.classList.toggle('dark-mode');
+    themeButton.setAttribute('aria-pressed', String(isDarkMode));
+    themeButton.setAttribute('aria-label', isDarkMode ? 'Switch to light mode' : 'Switch to dark mode');
+    themeButton.setAttribute('title', isDarkMode ? 'Switch to light mode' : 'Switch to dark mode');
+});
  
 
 hamburger.addEventListener('click', () => {
@@ -93,4 +103,4 @@ if (contactForm) {
             alert('Something went wrong. Please try again.');
         }
     });
-} 
+}
