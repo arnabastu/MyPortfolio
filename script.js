@@ -1,6 +1,80 @@
 
 import createGlobe from 'https://esm.sh/cobe';
 
+const markerData = [
+
+    { id: 'guwahati', location: [26.1445, 91.7362], label: 'Guwahati, Assam, India', featured: true },
+];
+
+const arcData = [
+
+];
+
+const globeCanvas = document.getElementById('globe-canvas');
+
+if (globeCanvas) {
+    const globe = createGlobe(globeCanvas, {
+        devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2),
+        width: 440,
+        height: 440,
+        phi: 0,
+        theta: 0.2,
+        dark: 0,
+        diffuse: 1.5,
+        mapSamples: 16000,
+        mapBrightness: 10,
+        baseColor: [1, 1, 1],
+        markerColor: [0.3, 0.45, 0.85],
+        glowColor: [0.94, 0.93, 0.91],
+        markerElevation: 0.01,
+        markers: markerData.map((marker) => ({
+            location: marker.location,
+            size: marker.featured ? 0.04 : 0.025,
+            id: marker.id,
+        })),
+        arcs: arcData.map((arc) => ({
+            from: arc.from,
+            to: arc.to,
+            id: arc.id,
+        })),
+        arcColor: [0.3, 0.45, 0.85],
+        arcWidth: 0.5,
+        arcHeight: 0.25,
+        opacity: 0.7,
+    });
+
+    let phi = 0;
+    const theta = 0.2;
+    const animate = () => {
+        phi += 0.003;
+        globe.update({
+            phi,
+            theta,
+            dark: 0,
+            mapBrightness: 10,
+            markerColor: [0.3, 0.45, 0.85],
+            baseColor: [1, 1, 1],
+            arcColor: [0.3, 0.45, 0.85],
+            markerElevation: 0.01,
+            markers: markerData.map((marker) => ({
+                location: marker.location,
+                size: marker.featured ? 0.04 : 0.025,
+                id: marker.id,
+            })),
+            arcs: arcData.map((arc) => ({
+                from: arc.from,
+                to: arc.to,
+                id: arc.id,
+            })),
+        });
+        requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    window.addEventListener('beforeunload', () => globe.destroy());
+}
+
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 const themeButton = document.getElementById('theme');
